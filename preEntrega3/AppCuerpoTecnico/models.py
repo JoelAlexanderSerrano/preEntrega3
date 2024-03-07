@@ -3,7 +3,7 @@ from django.db import models
 class DirectorTecnico(models.Model):
 
     nombre = models.CharField(max_length=30)
-    apeliido = models.CharField(max_length=30)
+    apellido = models.CharField(max_length=30)
     edad = models.IntegerField()
 
     def __str__(self):
@@ -12,7 +12,7 @@ class DirectorTecnico(models.Model):
 class AyudanteCampo(models.Model):
 
     nombre = models.CharField(max_length=30)
-    apeliido = models.CharField(max_length=30)
+    apellido = models.CharField(max_length=30)
     edad = models.IntegerField()
 
     def __str__(self):
@@ -21,7 +21,7 @@ class AyudanteCampo(models.Model):
 class PreparadorFisico(models.Model):
 
     nombre = models.CharField(max_length=30)
-    apeliido = models.CharField(max_length=30)
+    apellido = models.CharField(max_length=30)
     edad = models.IntegerField() 
 
     def __str__(self):
@@ -30,7 +30,7 @@ class PreparadorFisico(models.Model):
 class EntrenadorArqueros(models.Model):
 
     nombre = models.CharField(max_length=30)
-    apeliido = models.CharField(max_length=30)
+    apellido = models.CharField(max_length=30)
     edad = models.IntegerField()       
 
     def __str__(self):
@@ -39,7 +39,7 @@ class EntrenadorArqueros(models.Model):
 class Kinesiologo(models.Model):
 
     nombre = models.CharField(max_length=30)
-    apeliido = models.CharField(max_length=30)
+    apellido = models.CharField(max_length=30)
     edad = models.IntegerField()    
 
     def __str__(self):
