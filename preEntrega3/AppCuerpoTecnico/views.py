@@ -3,6 +3,10 @@ from .models import DirectorTecnico, AyudanteCampo, PreparadorFisico, Entrenador
 from .forms import DirectorTecnicoFormulario, AyudanteCampoFormulario, PreparadorFisicoFormulario, EntrenadorArquerosFormulario, KinesiologoFormulario
 
 
+def inicio(request):
+    
+    return render(request, "AppCuerpoTecnico/inicio.html")
+
 def agregar_directortecnico(request):
 
     if request.method == "POST":
@@ -18,6 +22,8 @@ def agregar_directortecnico(request):
                                        edad= info_dict["edad"])
             
             nuevo_dt.save()
+
+            return render(request, "AppCuerpoTecnico/inicio.html")
 
     else:
 
@@ -40,6 +46,8 @@ def agregar_ayudantecampo(request):
                                        edad= info_dict["edad"])
             
             nuevo_ac.save()
+
+            return render(request, "AppCuerpoTecnico/inicio.html")
 
     else:
 
@@ -64,6 +72,8 @@ def agregar_preparadorfisico(request):
                                         edad = info_dict["edad"])
             
             nuevo_pf.save()
+
+            return render(request, "AppCuerpoTecnico/inicio.html")
             
     else:
         
@@ -86,6 +96,8 @@ def agregar_entrenadorarqueros(request):
                                         edad = info_dict["edad"])
             
             nuevo_ea.save()
+
+            return render(request, "AppCuerpoTecnico/inicio.html")
             
     else:
         
@@ -108,6 +120,8 @@ def agregar_kinesiologo(request):
                                         edad = info_dict["edad"])
             
             nuevo_ki.save()
+
+            return render(request, "AppCuerpoTecnico/inicio.html")
             
     else:
         
